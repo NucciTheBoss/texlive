@@ -1,9 +1,9 @@
 name: texlive-publishers
 version: "2022"
 license: LPPL-1.2
-summary: TexLive - the publishers collection. 
+summary: Texlive - the publishers collection. 
 description: |
-  The publishers collection of TexLive in a snap!
+  The publishers collection of Texlive in a snap!
 
 base: core22
 grade: stable
