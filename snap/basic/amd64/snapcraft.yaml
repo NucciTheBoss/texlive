@@ -1,0 +1,217 @@
+name: texlive-basic
+version: "2022"
+license: LPPL-1.2
+summary: TexLive - the basic scheme.
+description: |
+  The basic scheme of TexLive in a snap!
+
+base: core22
+grade: stable
+confinement: strict
+compression: lzo
+
+environment:
+  MANPATH: $SNAP/texmf-dist/doc/man:/usr/local/share/man:$MANPATH
+  INFOPATH: $SNAP/texmf-dist/doc/info:/usr/local/share/info:$INFOPATH
+  TEXDIR: $SNAP
+  TEXMFLOCAL: $SNAP/texmf-local
+  TEXMFSYSCONFIG: $SNAP/texmf-config
+  TEXMFSYSVAR: $SNAP/texmf-var
+  TEXMFHOME: $HOME/texmf
+  TEXMFCONFIG: $HOME/.texlive$SNAP_VERSION/texmf-config
+  TEXMFVAR: $HOME/.texlive2022$SNAP_VERSION/texmf-var
+
+apps:
+  afm2tfm:
+    command: bin/x86_64-linux/afm2tfm
+    plugs: ["home", "removable-media"]
+  bibtex:
+    command: bin/x86_64-linux/bibtex
+    plugs: ["home", "removable-media"]
+  dvilualatex:
+    command: bin/x86_64-linux/dvilualatex
+    plugs: ["home", "removable-media"]
+  dviluatex:
+    command: bin/x86_64-linux/dviluatex
+    plugs: ["home", "removable-media"]
+  dvipdfm:
+    command: bin/x86_64-linux/dvipdfm
+    plugs: ["home", "removable-media"]
+  dvipdfmx:
+    command: bin/x86_64-linux/dvipdfmx
+    plugs: ["home", "removable-media"]
+  dvipdft:
+    command: bin/x86_64-linux/dvipdft
+    plugs: ["home", "removable-media"]
+  dvips:
+    command: bin/x86_64-linux/dvips
+    plugs: ["home", "removable-media"]
+  ebb:
+    command: bin/x86_64-linux/ebb
+    plugs: ["home", "removable-media"]
+  etex:
+    command: bin/x86_64-linux/etex
+    plugs: ["home", "removable-media"]
+  extractbb:
+    command: bin/x86_64-linux/extractbb
+    plugs: ["home", "removable-media"]
+  fmtutil:
+    command: bin/x86_64-linux/fmtutil
+    plugs: ["home", "removable-media"]
+  fmtutil-sys:
+    command: bin/x86_64-linux/fmtutil-sys
+    plugs: ["home", "removable-media"]
+  fmtutil-user:
+    command: bin/x86_64-linux/fmtutil-user
+    plugs: ["home", "removable-media"]
+  gftodvi:
+    command: bin/x86_64-linux/gftodvi
+    plugs: ["home", "removable-media"]
+  gftopk:
+    command: bin/x86_64-linux/gftopk
+    plugs: ["home", "removable-media"]
+  gftype:
+    command: bin/x86_64-linux/gftype
+    plugs: ["home", "removable-media"]
+  inimf:
+    command: bin/x86_64-linux/inimf
+    plugs: ["home", "removable-media"]
+  initex:
+    command: bin/x86_64-linux/initex
+    plugs: ["home", "removable-media"]
+  kpseaccess:
+    command: bin/x86_64-linux/kpseaccess
+    plugs: ["home", "removable-media"]
+  kpsereadlink:
+    command: bin/x86_64-linux/kpsereadlink
+    plugs: ["home", "removable-media"]
+  kpsestat:
+    command: bin/x86_64-linux/kpsestat
+    plugs: ["home", "removable-media"]
+  kpsewhich:
+    command: bin/x86_64-linux/kpsewhich
+    plugs: ["home", "removable-media"]
+  latex:
+    command: bin/x86_64-linux/latex
+    plugs: ["home", "removable-media"]
+  luahbtex:
+    command: bin/x86_64-linux/luahbtex
+    plugs: ["home", "removable-media"]
+  lualatex:
+    command: bin/x86_64-linux/lualatex
+    plugs: ["home", "removable-media"]
+  luaotfload-tool:
+    command: bin/x86_64-linux/luaotfload-tool
+    plugs: ["home", "removable-media"]
+  luatex:
+    command: bin/x86_64-linux/luatex
+    plugs: ["home", "removable-media"]
+  makeindex:
+    command: bin/x86_64-linux/makeindex
+    plugs: ["home", "removable-media"]
+  mf:
+    command: bin/x86_64-linux/mf
+    plugs: ["home", "removable-media"]
+  mf-nowin:
+    command: bin/x86_64-linux/mf-nowin
+    plugs: ["home", "removable-media"]
+  mft:
+    command: bin/x86_64-linux/mft
+    plugs: ["home", "removable-media"]
+  mkindex:
+    command: bin/x86_64-linux/mkindex
+    plugs: ["home", "removable-media"]
+  mktexfmt:
+    command: bin/x86_64-linux/mktexfmt
+    plugs: ["home", "removable-media"]
+  mktexlsr:
+    command: bin/x86_64-linux/mktexlsr
+    plugs: ["home", "removable-media"]
+  mktexmf:
+    command: bin/x86_64-linux/mktexmf
+    plugs: ["home", "removable-media"]
+  mktexpk:
+    command: bin/x86_64-linux/mktexpk
+    plugs: ["home", "removable-media"]
+  mktextfm:
+    command: bin/x86_64-linux/mktextfm
+    plugs: ["home", "removable-media"]
+  mptopdf:
+    command: bin/x86_64-linux/mptopdf
+    plugs: ["home", "removable-media"]
+  pdfetex:
+    command: bin/x86_64-linux/pdfetex
+    plugs: ["home", "removable-media"]
+  pdflatex:
+    command: bin/x86_64-linux/pdflatex
+    plugs: ["home", "removable-media"]
+  pdftex:
+    command: bin/x86_64-linux/pdftex
+    plugs: ["home", "removable-media"]
+  pktogf:
+    command: bin/x86_64-linux/pktogf
+    plugs: ["home", "removable-media"]
+  pktype:
+    command: bin/x86_64-linux/pktype
+    plugs: ["home", "removable-media"]
+  rungs:
+    command: bin/x86_64-linux/rungs
+    plugs: ["home", "removable-media"]
+  simpdftex:
+    command: bin/x86_64-linux/simpdftex
+    plugs: ["home", "removable-media"]
+  tex:
+    command: bin/x86_64-linux/tex
+    plugs: ["home", "removable-media"]
+  texhash:
+    command: bin/x86_64-linux/texhash
+    plugs: ["home", "removable-media"]
+  texlua:
+    command: bin/x86_64-linux/texlua
+    plugs: ["home", "removable-media"]
+  texluac:
+    command: bin/x86_64-linux/texluac
+    plugs: ["home", "removable-media"]
+  tlmgr:
+    command: bin/x86_64-linux/tlmgr
+    plugs: ["home", "removable-media"]
+  tlshell:
+    command: bin/x86_64-linux/tlshell
+    plugs: ["home", "removable-media"]
+  updmap:
+    command: bin/x86_64-linux/updmap
+    plugs: ["home", "removable-media"]
+  updmap-sys:
+    command: bin/x86_64-linux/updmap-sys
+    plugs: ["home", "removable-media"]
+  updmap-user:
+    command: bin/x86_64-linux/updmap-user
+    plugs: ["home", "removable-media"]
+  xdvi:
+    command: bin/x86_64-linux/xdvi
+    plugs: ["home", "removable-media"]
+  xdvi-xaw:
+    command: bin/x86_64-linux/xdvi-xaw
+    plugs: ["home", "removable-media"]
+  xdvipdfmx:
+    command: bin/x86_64-linux/xdvipdfmx
+    plugs: ["home", "removable-media"]
+
+parts:
+  texlive:
+    plugin: nil
+    build-packages:
+      - gzip
+      - perl-base
+      - wget
+    override-build: |
+      craftctl default
+      wget https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+      zcat install-tl-unx.tar.gz | tar xf -
+      rm install-tl-unx.tar.gz
+      cd install-tl-*
+      cat << EOF > texlive.profile
+      selected_scheme scheme-basic
+      binary_x86_64-linux 1
+      EOF
+      perl ./install-tl --no-interaction --texdir=$CRAFT_PART_INSTALL --profile texlive.profile
