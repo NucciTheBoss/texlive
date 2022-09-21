@@ -1,4 +1,4 @@
-name: texlive-publishers
+name: texlive-publishers-collection
 version: "2022"
 license: LPPL-1.2
 summary: Texlive - the publishers collection. 
@@ -8,7 +8,7 @@ description: |
 base: core22
 grade: stable
 confinement: strict
-compression: lzo
+compression: xz
 
 environment:
   MANPATH: $SNAP/texmf-dist/doc/man:/usr/local/share/man:$MANPATH
@@ -123,9 +123,6 @@ apps:
     plugs: ["home", "removable-media"]
   makejvf:
     command: bin/x86_64-linux/makejvf
-    plugs: ["home", "removable-media"]
-  man:
-    command: bin/x86_64-linux/man
     plugs: ["home", "removable-media"]
   mendex:
     command: bin/x86_64-linux/mendex
